@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import images from '../../Images/WhatsApp Image 2022-10-25 at 3.36.49 AM.jpeg'
 import Advisors from '../Advisors/Advisors';
 import CpcWings from '../CpcWings/CpcWings';
+import Footer from '../Footer/Footer';
 const Home = () => {
     const advisors = useLoaderData();
     const cpc = [
@@ -125,6 +126,12 @@ const Home = () => {
                 }
               </div>
             </div>
+
+            {/* Start Footer section */}
+            <footer className='bg-gray-500 h-52'>
+                <Footer></Footer>
+            </footer>
+           
         </section>
     );
 };
