@@ -108,6 +108,22 @@ const Home = () => {
                     ></Advisors>)
                 }
               </div>
+              <div className='flex justify-around mt-12'>
+               {
+                    advisors.slice(12,16).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+              </div>
+              <div className='mt-12'>
+               {
+                    advisors.slice(16,17).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+              </div>
             </div>
         </section>
     );
