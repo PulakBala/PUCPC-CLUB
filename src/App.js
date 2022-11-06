@@ -17,6 +17,9 @@ function App() {
         children:[
           {
             path: '/',
+            loader: async () => {
+              return fetch('advisors.json');
+            },
             element: <Home></Home>
           },
           {
