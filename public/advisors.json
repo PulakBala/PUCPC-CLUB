@@ -3,7 +3,7 @@
     "userId": 1,
     "id": 1,
     "title": "delectus aut autem",
-    "possiton": "",
+    "position": "Dean",
     "completed": false,
     "picture":"../advisorImage/member.jpg"
     },
@@ -11,6 +11,7 @@
     "userId": 1,
     "id": 2,
     "title": "quis ut nam facilis et officia qui",
+    "position": "Head",
     "completed": false,
     "picture":"../advisorImage/member.jpg"
     },
@@ -18,6 +19,7 @@
     "userId": 1,
     "id": 3,
     "title": "fugiat veniam minus",
+    "position": "Teachers-1",
     "completed": false,
     "picture":"../advisorImage/member.jpg"
     },
@@ -25,7 +27,70 @@
     "userId": 1,
     "id": 4,
     "title": "et porro tempora",
+    "position": "Teachers-2",
     "completed": true,
     "picture":"../advisorImage/member.jpg"
+    },
+    {
+        "userId": 1,
+        "id": 5,
+        "title": "et porro tempora",
+        "position": "President",
+        "completed": true,
+        "picture":"../advisorImage/member.jpg"
+    },
+    {
+        "userId": 1,
+        "id": 6,
+        "title": "et porro tempora",
+        "position": "GS",
+        "picture":"../advisorImage/member.jpg"
     }
+    ,
+    {
+        "userId": 1,
+        "id": 7,
+        "title": "et porro tempora",
+        "position": "GS-helper",
+        "picture":"../advisorImage/member.jpg"
+    }
+    ,
+    {
+        "userId": 1,
+        "id": 8,
+        "title": "et porro tempora",
+        "position": "GS-helper",
+        "picture":"../advisorImage/member.jpg"
+    }
+    ,
+    {
+        "userId": 1,
+        "id": 9,
+        "title": "et porro tempora",
+        "position": "GS-helper",
+        "picture":"../advisorImage/member.jpg"
+    }
+    ,
+    {
+        "userId": 1,
+        "id": 10,
+        "title": "et porro tempora",
+        "position": "GS-helper",
+        "picture":"../advisorImage/member.jpg"
+    },
+    {
+        "userId": 1,
+        "id": 11,
+        "title": "et porro tempora",
+        "position": "Treasurer",
+        "picture":"../advisorImage/member.jpg"
+    },
+    {
+        "userId": 1,
+        "id": 12,
+        "title": "et porro tempora",
+        "position": "Press Secretary",
+        "picture":"../advisorImage/member.jpg"
+    }
+
 ]    

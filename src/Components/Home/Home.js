@@ -23,7 +23,7 @@ const Home = () => {
     ]
     return (
         <section>
-            
+              
             <div>
                <img className='w-full' src={images} alt="" />
             </div>
@@ -33,25 +33,76 @@ const Home = () => {
                 cpc.map((cp,idx)=> <CpcWings key={idx} cp={cp}></CpcWings>)
                }
             </div>
-            
-            <div className='grid grid-cols-1'>
+
+               {/* meet the advisors */}
+
+               <h4 className='text-3xl font-bold'>Meet The Advisors</h4>
+               <p className='text-lg font-bold mt-4'>The advising teachers of PU Computer & Programming Club</p>
+            <div className='grid grid-cols-1 mt-12'>
                 {
                     advisors.slice(0,1).map(advisor => <Advisors
                         key={advisor.id}
                         advisor={advisor}
                     ></Advisors>)
                 }
-              <div className='flex justify-center mt-12'>
+              <div className='flex justify-around mt-12 ml-12 p-4'>
               {
-                    advisors.slice(0,2).map(advisor => <Advisors
+                    advisors.slice(1,3).map(advisor => <Advisors
                         key={advisor.id}
                         advisor={advisor}
                     ></Advisors>)
                 }
               </div>
-              <div className='flex justify-center mt-12'>
+              <div className='flex justify-center mt-8'>
               {
-                    advisors.slice(0,1).map(advisor => <Advisors
+                    advisors.slice(3,4).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+              </div>
+
+              {/* Meet the Team */}
+
+              <h4 className='text-3xl font-bold mt-12'>Meet The Team</h4>
+              <p className='text-lg font-bold mt-4'>The core members of PU Computer & Programming Club</p>
+
+              <div className='mt-12 '>
+               {
+                    advisors.slice(4,5).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+               
+              </div>
+              <div className='mt-12'>
+               {
+                    advisors.slice(5,6).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+              </div>
+              <div className='flex justify-around mt-12'>
+               {
+                    advisors.slice(6,10).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+              </div>
+              <div className='mt-12'>
+               {
+                    advisors.slice(10,11).map(advisor => <Advisors
+                        key={advisor.id}
+                        advisor={advisor}
+                    ></Advisors>)
+                }
+              </div>
+              <div className='mt-12'>
+               {
+                    advisors.slice(11,12).map(advisor => <Advisors
                         key={advisor.id}
                         advisor={advisor}
                     ></Advisors>)
