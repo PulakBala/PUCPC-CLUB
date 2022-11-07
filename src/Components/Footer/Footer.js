@@ -1,4 +1,5 @@
 import React from 'react';
+//get out fontawesome imports
 
 const Footer = () => {
     return (
@@ -10,7 +11,13 @@ const Footer = () => {
             </div>
             <div className="footer-social-media">
                 <h1 className='mt-6 text-2xl text-teal-50'>Find Us On</h1>
-                
+                <div className='text-3xl flex justify-around p-8'>
+
+                   <a href="https://www.facebook.com/CPCPrimeUniversity"><i class="fa-brands fa-facebook"></i></a>
+                   <i class="fa-brands fa-linkedin"></i>
+                   <i class="fa-brands fa-twitter"></i>
+                   <i class="fa-brands fa-instagram"></i>
+                </div>
             </div>
         </div>
     );

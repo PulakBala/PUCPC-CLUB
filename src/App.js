@@ -24,10 +24,14 @@ function App() {
           },
           {
             path: '/search',
+           
             element: <Search></Search>
           },
           {
             path: '/events',
+            loader: async() => {
+              return fetch('events.json');
+            },
             element: <Events></Events>
           },
           {
