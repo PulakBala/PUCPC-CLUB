@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='footer grid grid-cols-3 mt-20'>
+        <div className='footer grid grid-cols-3'>
             <h1 className='mt-24 text-2xl mr-8 text-cyan-50'>Computer Programming Club</h1>
             <div className="footer-container">
                 <h1 className='mt-6 text-2xl'>About  <span className='text-rose-50 font-bold'>PUCPC</span></h1>
@@ -10,6 +10,7 @@ const Footer = () => {
             </div>
             <div className="footer-social-media">
                 <h1 className='mt-6 text-2xl text-teal-50'>Find Us On</h1>
+                
             </div>
         </div>
     );

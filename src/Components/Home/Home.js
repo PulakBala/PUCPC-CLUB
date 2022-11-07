@@ -40,12 +40,14 @@ const Home = () => {
                <h4 className='text-3xl font-bold'>Meet The Advisors</h4>
                <p className='text-lg font-bold mt-4'>The advising teachers of PU Computer & Programming Club</p>
             <div className='grid grid-cols-1 mt-12'>
-                {
-                    advisors.slice(0,1).map(advisor => <Advisors
+              <div>
+               {
+                     advisors.slice(0,1).map(advisor => <Advisors
                         key={advisor.id}
                         advisor={advisor}
                     ></Advisors>)
-                }
+               }
+              </div>  
               <div className='flex justify-around mt-12 ml-12 p-4'>
               {
                     advisors.slice(1,3).map(advisor => <Advisors
@@ -117,7 +119,7 @@ const Home = () => {
                     ></Advisors>)
                 }
               </div>
-              <div className='mt-12'>
+              <div className='py-12 '>
                {
                     advisors.slice(16,17).map(advisor => <Advisors
                         key={advisor.id}
