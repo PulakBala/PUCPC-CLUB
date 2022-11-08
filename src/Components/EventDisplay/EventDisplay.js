@@ -3,7 +3,7 @@ import './EventDisplay.css'
 const EventDispaly = ({event}) => {
     const {picture, title, date, summery} = event;
     return (
-        <div className='flex border-4 rounded-3xl mt-10 h-56 w-9/12'>
+        <div className='flex border-4 rounded-3xl mt-10 h-56 w-9/12 ml-60 mb-10'>
             <div>
                 <img className='event h-full' src={picture} alt="" />
             </div>
@@ -12,6 +12,7 @@ const EventDispaly = ({event}) => {
                 <p><small>{date}</small></p>
                 <p>{summery}</p>
             </div>
+        
         </div>
     );
 };
