@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 
 const Login = () => {
@@ -18,6 +19,7 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log("login user details", user);
+            form.reset();
         })
         .catch(error =>{
             console.error(error);
@@ -28,15 +30,20 @@ const Login = () => {
             <form onSubmit={handleSubmitLogin}>
                 <label className="input-group input-group-vertical">
                     <span>Email</span>
-                    <input type="text" placeholder="write email" name='email' className="input input-bordered" />
+                    <input type="text" placeholder="write email" name='email' className="input input-bordered" required />
 
                 </label>
 
                 <label className="input-group input-group-vertical">
                     <span className='mt-4'>Password</span>
-                    <input type="password" placeholder="write password" name='password' className="input input-bordered" />
+                    <input type="password" placeholder="write password" name='password' className="input input-bordered" required/>
 
                 </label>
+
+                <label className=" input-group input-group-vertical mt-6">
+                   <p>New to club <Link to='/registration' className='link link:hover hover:bg-slate-500'> Create a New Account</Link></p>  
+                </label>
+
                  <button className="btn btn-outline mt-5">Login</button>
             </form>
         </div>

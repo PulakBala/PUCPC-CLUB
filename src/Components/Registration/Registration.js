@@ -34,19 +34,19 @@ const Registration = () => {
         <form onSubmit={handleSubmit}>
             <label className="input-group input-group-vertical mb-4">
                 <span>Name</span>
-                <input type="text" placeholder="Name" name='name' className="input input-bordered" />
+                <input type="text" placeholder="Name" name='name' className="input input-bordered" required/>
 
             </label>
 
             <label className="input-group input-group-vertical">
                 <span>Email</span>
-                <input type="text" placeholder="write email" name='email' className="input input-bordered" />
+                <input type="text" placeholder="write email" name='email' className="input input-bordered" required/>
 
             </label>
 
             <label className="input-group input-group-vertical">
                 <span className='mt-4'>Password</span>
-                <input type="password" placeholder="write password" name='password' className="input input-bordered" />
+                <input type="password" placeholder="write password" name='password' className="input input-bordered"required />
             </label>
             <label className="link link-hover input-group input-group-vertical mt-6 hover:bg-slate-500">
               

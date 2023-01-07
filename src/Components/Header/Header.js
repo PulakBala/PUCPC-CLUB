@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import './Header.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/UserContext';
 const Header = () => {
+    const {user, logOut} = useContext(AuthContext)
     const [open, setOpen] = useState(false);
     return (
        <nav className='bg-gray-500 w-full h-16 sticky top-0'>
@@ -20,8 +23,15 @@ const Header = () => {
                 <Link to='/forum'>Forum</Link>
                 <Link to='/verify'>Verify Certificate</Link>
                 <Link to='/settings'>Settings</Link>
-                <Link to='/login'>Login</Link>
-                <Link to='/registration'>Registration</Link>
+               { 
+                  user?.uid ?
+                  <button onClick={logOut}>Log Out</button>
+                  :
+                  <> 
+                    <Link to='/login'>Login</Link>
+                    <Link to='/registration'>Registration</Link>
+                  </>
+                }
                </div>
          </div>
        </nav>
