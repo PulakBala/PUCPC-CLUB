@@ -5,7 +5,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
 

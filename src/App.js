@@ -9,6 +9,7 @@ import Search from './Components/Search/Search';
 import Settings from './Components/Settings/Settings';
 import Verify from './Components/Verify/Verify';
 import Main from './Layout/Main';
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,31 +22,31 @@ function App() {
             loader: async () => {
               return fetch('advisors.json');
             },
-            element: <Home></Home>
+            element: <PrivateRoute><Home></Home></PrivateRoute>
           },
           {
             path: '/search',
            
-            element: <Search></Search>
+            element: <PrivateRoute><Search></Search></PrivateRoute>
           },
           {
             path: '/events',
             loader: async() => {
               return fetch('events.json');
             },
-            element: <Events></Events>
+            element: <PrivateRoute><Events></Events></PrivateRoute>
           },
           {
             path: '/forum',
-            element: <Forum></Forum>
+            element: <PrivateRoute><Forum></Forum></PrivateRoute>
           },
           {
             path: '/verify',
-            element: <Verify></Verify>
+            element: <PrivateRoute> <Verify></Verify></PrivateRoute>
           },
           {
             path: '/settings',
-            element: <Settings></Settings>
+            element: <PrivateRoute><Settings></Settings></PrivateRoute>
           },
           {
             path: '/login',
