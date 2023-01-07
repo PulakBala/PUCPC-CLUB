@@ -21,6 +21,7 @@ const Header = () => {
                 <Link to='/verify'>Verify Certificate</Link>
                 <Link to='/settings'>Settings</Link>
                 <Link to='/login'>Login</Link>
+                <Link to='/registration'>Registration</Link>
                </div>
          </div>
        </nav>

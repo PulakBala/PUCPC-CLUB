@@ -4,6 +4,7 @@ import Events from './Components/Events/Events';
 import Forum from './Components/Forum/Forum';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import Registration from './Components/Registration/Registration';
 import Search from './Components/Search/Search';
 import Settings from './Components/Settings/Settings';
 import Verify from './Components/Verify/Verify';
@@ -49,6 +50,10 @@ function App() {
           {
             path: '/login',
             element: <Login></Login>
+          },
+          {
+            path: '/registration',
+            element: <Registration></Registration>
           }
         ]
       }
