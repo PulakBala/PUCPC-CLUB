@@ -5,13 +5,14 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext();
 
 const auth = getAuth(app);
 
 const UserContext = ({children}) => {
 
-    const [user, setUser] = useState({displayName: 'Pulak'});
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
 
     const createUser = (email, password)=>{
@@ -19,6 +20,7 @@ const UserContext = ({children}) => {
     }
 
     const signIn = (email, password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth,email,password);
     }
 
@@ -30,11 +32,12 @@ const UserContext = ({children}) => {
       const unSubcribe =  onAuthStateChanged(auth, currentUser =>{
             console.log(currentUser);
             setUser(currentUser);
+            setLoading(false);
         })
         return () => unSubcribe();
     },[])
 
-    const authInfo = {user,createUser,signIn,logOut}
+    const authInfo = {user,loading,createUser,signIn,logOut}
 
     return (
         <div>

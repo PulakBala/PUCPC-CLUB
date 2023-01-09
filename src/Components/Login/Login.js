@@ -1,11 +1,13 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
 
 const Login = () => {
     const {signIn} = useContext(AuthContext);
     const nevigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmitLogin = event =>{
         event.preventDefault();
@@ -21,7 +23,7 @@ const Login = () => {
             const user = result.user;
             console.log("login user details", user);
             form.reset();
-            nevigate('/');
+            nevigate(from, {replace:true});
         })
         .catch(error =>{
             console.error(error);
